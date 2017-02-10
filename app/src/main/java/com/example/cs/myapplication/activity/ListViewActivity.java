@@ -24,6 +24,7 @@ import java.util.Map;
 public class ListViewActivity extends AppCompatActivity {
 
 
+
     private ListView listView;
     List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
