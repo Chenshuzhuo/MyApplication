@@ -7,24 +7,7 @@
     android:background="@android:color/background_light">
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/themeColor"
-        android:weightSum="2">
 
-        <com.example.cs.myapplication.widget.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/person_image"
-            android:id="@+id/imageButton"
-            app:border_width="6dp"
-            app:border_color="#00000000"
-
-
-            android:background="@null"
-            android:scaleType="centerCrop" />
 
         <TextView
             android:layout_width="wrap_content"
