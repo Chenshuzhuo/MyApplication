@@ -80,6 +80,7 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
+
     private void hideKeyBorad(View v) {
         InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {
