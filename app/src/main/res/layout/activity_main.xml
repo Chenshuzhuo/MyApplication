@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.cs.myapplication.MainActivity">
+    tools:context="com.example.cs.myapplication.activity.MainActivity">
 
 
     <LinearLayout
@@ -152,7 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@color/themeColor"
             android:textColor="@android:color/background_light"
             android:textSize="24sp"
             android:textAlignment="center"
@@ -178,7 +178,7 @@
                 android:onClick="ClickHandler"
 
                 android:textSize="15sp"
-                android:textColor="@android:color/holo_blue_dark"
+                android:textColor="@color/themeColor"
                  />
 
             <TextView
@@ -199,7 +199,7 @@
                 android:layout_weight="0"
                 android:fontFamily="sans-serif"
                 android:onClick="ClickHandler"
-                android:textColor="@android:color/holo_blue_dark"
+                android:textColor="@color/themeColor"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -239,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/agreement"
 
-                android:textColor="@android:color/holo_blue_dark"
+                android:textColor="@color/themeColor"
                 android:textSize="15sp" />
 
             <TextView

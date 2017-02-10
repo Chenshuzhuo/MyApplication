@@ -11,7 +11,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/themeColor"
         android:weightSum="2">
 
         <ImageButton
@@ -51,7 +51,6 @@
                     android:layout_width="57dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/switch_button_b"
-
                     android:id="@+id/switchButtonL"
                     android:text="消息"
                     android:textColor="@android:color/background_light"
@@ -61,7 +60,7 @@
                     android:layout_width="57dp"
                     android:layout_height="match_parent"
                     android:id="@+id/switchButtonR"
-                    android:layout_weight="0.36"
+
                     android:background="@drawable/switch_button"
                     android:text="电话"
                     android:textColor="@android:color/holo_blue_dark"
@@ -85,7 +84,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:srcCompat="@android:drawable/ic_menu_add"
+            app:srcCompat="@drawable/add"
             android:id="@+id/imageButton2"
 
             android:background="@null"
@@ -102,14 +101,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/list"
-        android:layout_weight="1" />
+
+        android:layout_weight="1"
+        />
 
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark">
+        android:background="@color/themeColor">
 
         <ImageButton
             android:layout_width="wrap_content"

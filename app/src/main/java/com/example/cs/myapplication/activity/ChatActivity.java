@@ -1,31 +1,28 @@
-package com.example.cs.myapplication;
+package com.example.cs.myapplication.activity;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.cs.myapplication.R;
+import com.example.cs.myapplication.TestData;
 import com.example.cs.myapplication.adapter.ChatAdapter;
 import com.example.cs.myapplication.model.ChatModel;
 import com.example.cs.myapplication.model.ItemModel;
 
 import java.util.ArrayList;
-
-import static android.R.attr.content;
-import static com.example.cs.myapplication.R.id.et;
-import static com.example.cs.myapplication.R.id.tvSend;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -87,6 +84,25 @@ public class ChatActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {
             imm.hideSoftInputFromWindow(v.getApplicationWindowToken(), 0);
+        }
+    }
+
+    public void ClickHandler(View T) {
+        Button lButton = (Button) findViewById(R.id.switchButtonL);
+        Button rButton = (Button) findViewById(R.id.switchButtonR);
+        switch (T.getId()) {
+
+            case R.id.chatTurnBack:
+                //新建一个Intent
+                Intent intent = new Intent();
+                //制定intent要启动的类
+                intent.setClass(ChatActivity.this, ListViewActivity.class);
+                //启动一个新的Activity
+                startActivity(intent);
+
+                overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
+                break;
+
         }
     }
 

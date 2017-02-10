@@ -1,24 +1,21 @@
-package com.example.cs.myapplication;
+package com.example.cs.myapplication.activity;
 
-import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.example.cs.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static android.R.attr.data;
-import static android.R.attr.drawable;
 
 /**
  * Created by pc on 2017/2/6.
@@ -27,6 +24,8 @@ import static android.R.attr.drawable;
 public class ListViewActivity extends AppCompatActivity {
 
     private ListView listView;
+
+    List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -44,19 +43,43 @@ public class ListViewActivity extends AppCompatActivity {
                 new String[]{"name","desc","img"},
 
                 new int[]{R.id.name,R.id.desc,R.id.img}));
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+            @Override
+
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+
+                                    long arg3) {
+
+                // TODO Auto-generated method stub
+
+                Map<String, Object> map = new HashMap<String, Object>();
+                map=list.get(arg2);
+
+
+                    //新建一个Intent
+                    Intent intent = new Intent();
+                    //制定intent要启动的类
+                    intent.setClass(ListViewActivity.this, ChatActivity.class);
+                    //启动一个新的Activity
+                    startActivity(intent);
+                    //关闭当前的
+
+                overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+
+
+            }
+        });
     }
 
 
     private List<Map<String, Object>> getData(){
-        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-
-
 
         Map<String, Object> map = new HashMap<String, Object>();
 
-        SearchView searchView=new SearchView(this);
-
-        map = new HashMap<String, Object>();
         map.put("name", "G1");
 
         map.put("desc", "google 1");
@@ -118,6 +141,65 @@ public class ListViewActivity extends AppCompatActivity {
         list.add(map);
 
 
+        map.put("name", "G1");
+
+        map.put("desc", "google 1");
+
+        map.put("img", R.drawable.ic_launcher);
+
+        list.add(map);
+
+
+
+        map = new HashMap<String, Object>();
+
+        map.put("name", "G2");
+
+        map.put("desc", "google 2");
+
+        map.put("img", R.drawable.ic_launcher);
+
+        list.add(map);
+
+
+
+        map = new HashMap<String, Object>();
+
+        map.put("name", "G3");
+
+        map.put("desc", "google 3");
+
+        map.put("img", R.drawable.ic_launcher);
+
+        list.add(map);
+
+        map = new HashMap<String, Object>();
+
+        map.put("name", "G3");
+
+        map.put("desc", "google 3");
+
+        map.put("img", R.drawable.ic_launcher);
+
+        list.add(map);
+        map = new HashMap<String, Object>();
+
+        map.put("name", "G3");
+
+        map.put("desc", "google 3");
+
+        map.put("img", R.drawable.ic_launcher);
+
+        list.add(map);
+        map = new HashMap<String, Object>();
+
+        map.put("name", "G3");
+
+        map.put("desc", "google 3");
+
+        map.put("img", R.drawable.ic_launcher);
+
+        list.add(map);
         return list;
 
     }
@@ -156,19 +238,16 @@ public class ListViewActivity extends AppCompatActivity {
 
                         new int[]{R.id.name,R.id.desc,R.id.img}));
                 break;
-            case R.id.imageButton3:
-                //新建一个Intent
-                Intent intent = new Intent();
-                //制定intent要启动的类
-                intent.setClass(ListViewActivity.this, ChatActivity.class);
-                //启动一个新的Activity
-                startActivity(intent);
-                //关闭当前的
-                ListViewActivity.this.finish();
-                break;
+
 
 
         }
+
+
+
+
+
+
     }
 
 
