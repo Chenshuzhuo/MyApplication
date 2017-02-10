@@ -25,10 +25,6 @@
                     android:layout_height="match_parent"
                     android:id="@+id/switchButtonR"
 
-                    android:background="@drawable/switch_button"
-                    android:text="电话"
-                    android:textColor="@color/themeColor"
-                    android:onClick="ClickHandler"/>
             </LinearLayout>
 
             <TextView
