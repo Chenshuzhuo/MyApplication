@@ -21,20 +21,6 @@
             android:layout_height="50dp"
             >
 
-
-
-
-
-                <Button
-                    android:layout_width="57dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/switch_button_b"
-                    android:id="@+id/switchButtonL"
-                    android:text="消息"
-                    android:textColor="@android:color/background_light"
-                    android:onClick="ClickHandler" />
-
-                <Button
                     android:layout_width="57dp"
                     android:layout_height="match_parent"
                     android:id="@+id/switchButtonR"
