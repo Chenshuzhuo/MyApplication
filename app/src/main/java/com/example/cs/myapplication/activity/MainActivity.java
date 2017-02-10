@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 //新建一个Intent
                 Intent intent = new Intent();
                 //制定intent要启动的类
-                intent.setClass(MainActivity.this, ListViewActivity.class);
+                intent.setClass(MainActivity.this, Main2Activity.class);
                 //启动一个新的Activity
                 startActivity(intent);
                 //关闭当前的
