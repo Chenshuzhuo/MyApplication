@@ -9,19 +9,6 @@
 
 
 
-        <TextView
-
-                    android:layout_width="57dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/switchButtonR"
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView17"
-                android:layout_weight="0.59" />
 
         </LinearLayout>
 
